@@ -1,0 +1,10 @@
+# Java
+target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Spark job results
+images/
+data/model
