@@ -29,7 +29,7 @@ Then, start the Hadoop cluster with:
   
 Once the cluster running, you will run bash shell in master container. The next steps will run in master container.
 
-### Run Spark jobs 
+### Run Spark job
 
 Compute the model:
 
