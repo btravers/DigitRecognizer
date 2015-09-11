@@ -22,6 +22,12 @@ First, you need to build Spark recognizer using Maven:
 If you run the application for the first time, you need to build cluster's Docker images:
 
     ./build-images.sh
+    
+Then, start the Hadoop cluster with:
+
+    ./start-cluster.sh
+  
+Once the cluster running, you will run bash shell in master container. The next steps will run in master container.
 
 ### Run Spark jobs 
 
@@ -36,11 +42,7 @@ Recognizer digit from test file using:
 
 ### Run Spark job on YARN
  
-Then, start the Hadoop cluster with:
-
-    ./start-cluster.sh
-  
-Once the cluster running, you will run bash shell in master container. Start Hadoop:
+Start Hadoop:
 
     ./start-hadoop.sh
   
