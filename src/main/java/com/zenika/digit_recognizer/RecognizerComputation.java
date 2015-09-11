@@ -69,7 +69,7 @@ public class RecognizerComputation {
         DataFrame dataFrames = sqlContext.createDataFrame(labeledPoints, LabeledPoint.class);
 
         logger.info("Generating train and test sets randomly.");
-        DataFrame[] splits = dataFrames.randomSplit(new double[]{0.6, 0.4}, SEED);
+        DataFrame[] splits = dataFrames.randomSplit(new double[]{0.8, 0.2}, SEED);
 
         DataFrame train = splits[0];
         DataFrame test = splits[1];
