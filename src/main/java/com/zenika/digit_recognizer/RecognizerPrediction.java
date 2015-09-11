@@ -56,7 +56,7 @@ public class RecognizerPrediction {
 
                 int prediction = (int) model.predict(vector);
 
-                BufferedImage img = new BufferedImage(Utils.IMAGE_SIZE, Utils.IMAGE_SIZE, BufferedImage.TYPE_BYTE_GRAY);
+                BufferedImage img = new BufferedImage(Utils.IMAGE_SIZE, Utils.IMAGE_SIZE, BufferedImage.TYPE_INT_RGB);
                 for (int i = 0; i < Utils.IMAGE_SIZE; i++) {
                     for (int j = 0; j < Utils.IMAGE_SIZE; j++) {
                         img.setRGB(i, j, (int) pixels[i + j * Utils.IMAGE_SIZE]);

@@ -54,5 +54,5 @@ Put datasets into HDFS:
 Finally, run Spark job on YARN for model computation and digit prediction:
 
     $SPARK_HOME/bin/spark-submit --master yarn-cluster --class com.zenika.digit_recognizer.RecognizerComputation /recognizer/digit_recognizer-0.0.0-jar-with-dependencies.jar /data/train.csv /data/model
-    $SPARK_HOME/bin/spark-submit --master yarn-cluster --class com.zenika.digit_recognizer.RecognizerPrediction /recognizer/digit_recognizer-0.0.0-jar-with-dependencies.jar /data/model /data/test.csv /images/
+    $SPARK_HOME/bin/spark-submit --master yarn-cluster --class com.zenika.digit_recognizer.RecognizerPrediction /recognizer/digit_recognizer-0.0.0-jar-with-dependencies.jar hdfs://master.btravers:9000/data/model /data/test.csv /images/
   
