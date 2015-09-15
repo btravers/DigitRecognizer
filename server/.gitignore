@@ -1,0 +1,9 @@
+target/
+.vertx/
+
+node/
+node_modules/
+dist/
+.sass-cache/
+src/main/javascript/app/bower_components/
+src/main/resources/web/dist/

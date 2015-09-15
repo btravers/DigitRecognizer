@@ -13,7 +13,7 @@ In order to correctly predict digits, I use a [Multilayer perceptron classifier]
 
 ## Build recognizer
 
-First, you need to build Spark recognizer using Maven:
+First, go to spark-job directory and build Spark recognizer using Maven:
 
     mvn clean package
 
