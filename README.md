@@ -2,6 +2,7 @@
 
 ## Prerequisite
 
+- Java 8
 - Maven
 - Docker
 
@@ -42,17 +43,16 @@ Recognizer digit from test file using:
 
 ### Run Spark job on YARN
  
-Start Hadoop:
+Coming soon
+ 
+## Display results
 
-    ./start-hadoop.sh
-  
-Put datasets into HDFS:
+A small Vert.x/React application will allow you to easily visualize your results. Go to server directory and package the application using Maven:
 
-    hadoop dfs -mkdir /data
-    hadoop dfs -put /data/* /data
+    mvn package
+    
+It should produce a fat jar. Execute it:
 
-Finally, run Spark job on YARN for model computation and digit prediction:
-
-    $SPARK_HOME/bin/spark-submit --master yarn-cluster --class com.zenika.digit_recognizer.RecognizerComputation /recognizer/digit_recognizer-0.0.0-jar-with-dependencies.jar /data/train.csv /data/model
-    $SPARK_HOME/bin/spark-submit --master yarn-cluster --class com.zenika.digit_recognizer.RecognizerPrediction /recognizer/digit_recognizer-0.0.0-jar-with-dependencies.jar hdfs://master.btravers:9000/data/model /data/test.csv /images/
-  
+    java -jar target/digit-recognizer-0.0.0-fat.jar
+    
+Open your favorite browser and go to [http://0.0.0.0/](http://0.0.0.0/).
